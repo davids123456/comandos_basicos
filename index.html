@@ -1,42 +1,18 @@
-<!doctype html>
-<html lang="es" data-bs-theme="auto">
+<!DOCTYPE html>
 
+<html data-bs-theme="auto" lang="es">
 <head>
-
-  <meta charset="utf-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta name="description" content="FISEI - Universidad Técnica de Ambato">
-
-  <meta
-    name="author"
-    content="Universidad Técnica de Ambato"
-  >
-
-  <meta name="generator" content="Astro v5.13.2">
-
-  <title>FISEI - Universidad Técnica de Ambato</title>
-
-  <script src="./assets/js/color-modes.js"></script>
-
-  <link
-    href="./assets/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
-
-  <meta
-    name="theme-color"
-    content="#712cf9"
-  >
-
-  <link
-    href="carousel.css"
-    rel="stylesheet"
-  >
-
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="FISEI - Universidad Técnica de Ambato" name="description"/>
+<meta content="Universidad Técnica de Ambato" name="author"/>
+<meta content="Astro v5.13.2" name="generator"/>
+<title>FISEI - Universidad Técnica de Ambato</title>
+<script src="./assets/js/color-modes.js"></script>
+<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<meta content="#712cf9" name="theme-color"/>
+<link href="carousel.css" rel="stylesheet"/>
+<style>
 
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -146,736 +122,284 @@
       object-fit: cover;
     }
 
-  </style>
+  
 
+    .carousel-imagen {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.58);
+    }
+
+    .imagen-carrera {
+      border-radius: 1rem;
+      box-shadow: 0 .75rem 1.75rem rgba(0, 0, 0, .16);
+    }
+</style>
 </head>
-
-
 <body>
-
-
-  <!-- ICONOS -->
-
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    class="d-none"
-  >
-
-
-    <symbol
-      id="check2"
-      viewBox="0 0 16 16"
-    >
-
-      <path
-        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
-      >
-      </path>
-
-    </symbol>
-
-
-    <symbol
-      id="circle-half"
-      viewBox="0 0 16 16"
-    >
-
-      <path
-        d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
-      >
-      </path>
-
-    </symbol>
-
-
-    <symbol
-      id="moon-stars-fill"
-      viewBox="0 0 16 16"
-    >
-
-      <path
-        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
-      >
-      </path>
-
-    </symbol>
-
-
-    <symbol
-      id="sun-fill"
-      viewBox="0 0 16 16"
-    >
-
-      <path
-        d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"
-      >
-      </path>
-
-    </symbol>
-
-  </svg>
-
-
-
-  <!-- CAMBIO DE TEMA -->
-
-  <div
-    class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"
-  >
-
-    <button
-      class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-      id="bd-theme"
-      type="button"
-      aria-expanded="false"
-      data-bs-toggle="dropdown"
-      aria-label="Toggle theme"
-    >
-
-      <svg
-        class="bi my-1 theme-icon-active"
-        aria-hidden="true"
-      >
-
-        <use href="#circle-half"></use>
-
-      </svg>
-
-
-      <span
-        class="visually-hidden"
-        id="bd-theme-text"
-      >
+<!-- ICONOS -->
+<svg class="d-none" xmlns="http://www.w3.org/2000/svg">
+<symbol id="check2" viewbox="0 0 16 16">
+<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z">
+</path>
+</symbol>
+<symbol id="circle-half" viewbox="0 0 16 16">
+<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z">
+</path>
+</symbol>
+<symbol id="moon-stars-fill" viewbox="0 0 16 16">
+<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z">
+</path>
+</symbol>
+<symbol id="sun-fill" viewbox="0 0 16 16">
+<path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z">
+</path>
+</symbol>
+</svg>
+<!-- CAMBIO DE TEMA -->
+<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+<button aria-expanded="false" aria-label="Toggle theme" class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown" id="bd-theme" type="button">
+<svg aria-hidden="true" class="bi my-1 theme-icon-active">
+<use href="#circle-half"></use>
+</svg>
+<span class="visually-hidden" id="bd-theme-text">
 
         Toggle theme
 
       </span>
-
-    </button>
-
-
-    <ul
-      class="dropdown-menu dropdown-menu-end shadow"
-      aria-labelledby="bd-theme-text"
-    >
-
-
-      <li>
-
-        <button
-          type="button"
-          class="dropdown-item d-flex align-items-center"
-          data-bs-theme-value="light"
-        >
-
-          <svg
-            class="bi me-2 opacity-50"
-            aria-hidden="true"
-          >
-
-            <use href="#sun-fill"></use>
-
-          </svg>
+</button>
+<ul aria-labelledby="bd-theme-text" class="dropdown-menu dropdown-menu-end shadow">
+<li>
+<button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" type="button">
+<svg aria-hidden="true" class="bi me-2 opacity-50">
+<use href="#sun-fill"></use>
+</svg>
 
           Light
 
         </button>
-
-      </li>
-
-
-      <li>
-
-        <button
-          type="button"
-          class="dropdown-item d-flex align-items-center"
-          data-bs-theme-value="dark"
-        >
-
-          <svg
-            class="bi me-2 opacity-50"
-            aria-hidden="true"
-          >
-
-            <use href="#moon-stars-fill"></use>
-
-          </svg>
+</li>
+<li>
+<button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" type="button">
+<svg aria-hidden="true" class="bi me-2 opacity-50">
+<use href="#moon-stars-fill"></use>
+</svg>
 
           Dark
 
         </button>
-
-      </li>
-
-
-      <li>
-
-        <button
-          type="button"
-          class="dropdown-item d-flex align-items-center active"
-          data-bs-theme-value="auto"
-        >
-
-          <svg
-            class="bi me-2 opacity-50"
-            aria-hidden="true"
-          >
-
-            <use href="#circle-half"></use>
-
-          </svg>
+</li>
+<li>
+<button class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" type="button">
+<svg aria-hidden="true" class="bi me-2 opacity-50">
+<use href="#circle-half"></use>
+</svg>
 
           Auto
 
         </button>
-
-      </li>
-
-    </ul>
-
-  </div>
-
-
-
-  <!-- NAVEGACIÓN -->
-
-  <header data-bs-theme="dark">
-
-
-    <nav
-      class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"
-    >
-
-
-      <div class="container-fluid">
-
-
-        <a
-          class="navbar-brand"
-          href="#"
-        >
+</li>
+</ul>
+</div>
+<!-- NAVEGACIÓN -->
+<header data-bs-theme="dark">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<div class="container-fluid">
+<a class="navbar-brand" href="#">
 
           FISEI
 
         </a>
-
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-          aria-controls="navbarCollapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-
-          <span class="navbar-toggler-icon"></span>
-
-        </button>
-
-
-        <div
-          class="collapse navbar-collapse"
-          id="navbarCollapse"
-        >
-
-
-          <ul
-            class="navbar-nav me-auto mb-2 mb-md-0"
-          >
-
-
-            <li class="nav-item">
-
-              <a
-                class="nav-link active"
-                href="#"
-              >
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+<li class="nav-item">
+<a class="nav-link active" href="#">
 
                 Inicio
 
               </a>
-
-            </li>
-
-
-            <li class="nav-item">
-
-              <a
-                class="nav-link"
-                href="#software"
-              >
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#software">
 
                 Software
 
               </a>
-
-            </li>
-
-
-            <li class="nav-item">
-
-              <a
-                class="nav-link"
-                href="#industrial"
-              >
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#industrial">
 
                 Industrial
 
               </a>
-
-            </li>
-
-
-            <li class="nav-item">
-
-              <a
-                class="nav-link"
-                href="#robotica"
-              >
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#robotica">
 
                 Robótica
 
               </a>
-
-            </li>
-
-
-            <li class="nav-item">
-
-              <a
-                class="nav-link"
-                href="#biblioteca"
-              >
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#biblioteca">
 
                 Biblioteca
 
               </a>
-
-            </li>
-
-
-            <li class="nav-item">
-
-              <a
-                class="nav-link"
-                href="#redes"
-              >
+</li><li class="nav-item"><a class="nav-link" href="#libreria">Librería</a></li>
+<li class="nav-item">
+<a class="nav-link" href="#redes">
 
                 Préstamo de Redes
 
               </a>
-
-            </li>
-
-
-            <li class="nav-item">
-
-              <a
-                class="nav-link"
-                href="#secretaria"
-              >
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#secretaria">
 
                 Secretaría
 
               </a>
-
-            </li>
-
-
-            <li class="nav-item">
-
-              <a
-                class="nav-link"
-                href="#aso"
-              >
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#aso">
 
                 ASO FISEI
 
               </a>
-
-            </li>
-
-
-          </ul>
-
-
-          <form
-            class="d-flex"
-            role="search"
-          >
-
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Buscar"
-              aria-label="Buscar"
-            >
-
-
-            <button
-              class="btn btn-outline-success"
-              type="submit"
-            >
+</li>
+</ul>
+<form class="d-flex" role="search">
+<input aria-label="Buscar" class="form-control me-2" placeholder="Buscar" type="search"/>
+<button class="btn btn-outline-success" type="submit">
 
               Buscar
 
             </button>
-
-          </form>
-
-
-        </div>
-
-
-      </div>
-
-
-    </nav>
-
-
-  </header>
-
-
-
-  <main>
-
-
-
-    <!-- CARRUSEL -->
-
-    <div
-      id="myCarousel"
-      class="carousel slide mb-6"
-      data-bs-ride="carousel"
-    >
-
-
-      <div class="carousel-indicators">
-
-
-        <button
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        >
-        </button>
-
-
-        <button
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        >
-        </button>
-
-
-        <button
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        >
-        </button>
-
-
-      </div>
-
-
-
-      <div class="carousel-inner">
-
-
-
-        <!-- SLIDE 1 -->
-
-        <div class="carousel-item active">
-
-
-          <svg
-            aria-hidden="true"
-            class="bd-placeholder-img"
-            height="100%"
-            preserveAspectRatio="xMidYMid slice"
-            width="100%"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-
-            <rect
-              width="100%"
-              height="100%"
-              fill="var(--bs-secondary-color)"
-            >
-            </rect>
-
-          </svg>
-
-
-          <div class="container">
-
-
-            <div class="carousel-caption text-start">
-
-
-              <h1>
+</form>
+</div>
+</div>
+</nav>
+</header>
+<main>
+<!-- CARRUSEL -->
+<div class="carousel slide mb-6" data-bs-ride="carousel" id="myCarousel">
+<div class="carousel-indicators">
+<button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#myCarousel" type="button">
+</button>
+<button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#myCarousel" type="button">
+</button>
+<button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#myCarousel" type="button">
+</button>
+</div>
+<div class="carousel-inner">
+<!-- SLIDE 1 -->
+<div class="carousel-item active">
+<img alt="Edificio de la Universidad Técnica de Ambato" class="d-block w-100 carousel-imagen" src="./img/Carrucell1.jpg" style="object-position: center center;"/>
+<div class="container">
+<div class="carousel-caption text-start">
+<h1>
 
                 Facultad de Ingeniería en Sistemas, Electrónica e Industrial
 
               </h1>
-
-
-              <p class="opacity-75">
+<p class="opacity-75">
 
                 Universidad Técnica de Ambato
 
               </p>
-
-
-              <p>
-
-                <a
-                  class="btn btn-lg btn-primary"
-                  href="#software"
-                >
+<p>
+<a class="btn btn-lg btn-primary" href="#software">
 
                   Conocer las carreras
 
                 </a>
-
-              </p>
-
-
-            </div>
-
-
-          </div>
-
-
-        </div>
-
-
-
-        <!-- SLIDE 2 -->
-
-        <div class="carousel-item">
-
-
-          <svg
-            aria-hidden="true"
-            class="bd-placeholder-img"
-            height="100%"
-            preserveAspectRatio="xMidYMid slice"
-            width="100%"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-
-            <rect
-              width="100%"
-              height="100%"
-              fill="var(--bs-secondary-color)"
-            >
-            </rect>
-
-          </svg>
-
-
-          <div class="container">
-
-
-            <div class="carousel-caption">
-
-
-              <h1>
+</p>
+</div>
+</div>
+</div>
+<!-- SLIDE 2 -->
+<div class="carousel-item">
+<img alt="Facultad de Ingeniería de la Universidad Técnica de Ambato" class="d-block w-100 carousel-imagen" src="./img/Carrucell2.jpg" style="object-position: center center;"/>
+<div class="container">
+<div class="carousel-caption">
+<h1>
 
                 FISEI
 
               </h1>
-
-
-              <p>
+<p>
 
                 Formación académica en tecnología,
                 ingeniería, innovación y desarrollo.
 
               </p>
-
-
-              <p>
-
-                <a
-                  class="btn btn-lg btn-primary"
-                  href="#industrial"
-                >
+<p>
+<a class="btn btn-lg btn-primary" href="#industrial">
 
                   Ver más
 
                 </a>
-
-              </p>
-
-
-            </div>
-
-
-          </div>
-
-
-        </div>
-
-
-
-        <!-- SLIDE 3 -->
-
-        <div class="carousel-item">
-
-
-          <svg
-            aria-hidden="true"
-            class="bd-placeholder-img"
-            height="100%"
-            preserveAspectRatio="xMidYMid slice"
-            width="100%"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-
-            <rect
-              width="100%"
-              height="100%"
-              fill="var(--bs-secondary-color)"
-            >
-            </rect>
-
-          </svg>
-
-
-          <div class="container">
-
-
-            <div class="carousel-caption text-end">
-
-
-              <h1>
+</p>
+</div>
+</div>
+</div>
+<!-- SLIDE 3 -->
+<div class="carousel-item">
+<img alt="Ingreso a la Universidad Técnica de Ambato" class="d-block w-100 carousel-imagen" src="./img/Carrucell3.jpg" style="object-position: center 52%;"/>
+<div class="container">
+<div class="carousel-caption text-end">
+<h1>
 
                 Innovación y Tecnología
 
               </h1>
-
-
-              <p>
+<p>
 
                 Carreras orientadas al desarrollo tecnológico
                 y productivo del país.
 
               </p>
-
-
-              <p>
-
-                <a
-                  class="btn btn-lg btn-primary"
-                  href="#robotica"
-                >
+<p>
+<a class="btn btn-lg btn-primary" href="#robotica">
 
                   Conocer más
 
                 </a>
-
-              </p>
-
-
-            </div>
-
-
-          </div>
-
-
-        </div>
-
-
-      </div>
-
-
-
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#myCarousel"
-        data-bs-slide="prev"
-      >
-
-        <span
-          class="carousel-control-prev-icon"
-          aria-hidden="true"
-        >
-        </span>
-
-
-        <span class="visually-hidden">
+</p>
+</div>
+</div>
+</div>
+</div>
+<button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#myCarousel" type="button">
+<span aria-hidden="true" class="carousel-control-prev-icon">
+</span>
+<span class="visually-hidden">
 
           Previous
 
         </span>
-
-
-      </button>
-
-
-
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#myCarousel"
-        data-bs-slide="next"
-      >
-
-        <span
-          class="carousel-control-next-icon"
-          aria-hidden="true"
-        >
-        </span>
-
-
-        <span class="visually-hidden">
+</button>
+<button class="carousel-control-next" data-bs-slide="next" data-bs-target="#myCarousel" type="button">
+<span aria-hidden="true" class="carousel-control-next-icon">
+</span>
+<span class="visually-hidden">
 
           Next
 
         </span>
-
-
-      </button>
-
-
-    </div>
-
-
-
-
-    <div class="container marketing">
-
-
-
-      <!-- SOFTWARE -->
-
-      <hr class="featurette-divider">
-
-
-      <div
-        class="row featurette"
-        id="software"
-      >
-
-
-        <div class="col-md-7">
-
-
-          <h2
-            class="featurette-heading fw-normal lh-1"
-          >
+</button>
+</div>
+<div class="container marketing">
+<!-- SOFTWARE -->
+<hr class="featurette-divider"/>
+<div class="row featurette" id="software">
+<div class="col-md-7">
+<h2 class="featurette-heading fw-normal lh-1">
 
             Carrera de Software.
 
@@ -884,11 +408,8 @@
               Tecnología e innovación.
 
             </span>
-
-          </h2>
-
-
-          <p class="lead">
+</h2>
+<p class="lead">
 
             El Ingeniero de Software de la Universidad Técnica de Ambato
             es un profesional capacitado para analizar, diseñar,
@@ -900,48 +421,16 @@
             programación y gestión de proyectos tecnológicos.
 
           </p>
-
-
-        </div>
-
-
-
-        <div class="col-md-5">
-
-
-          <img
-            src="images.jpg"
-            alt="Carrera de Software"
-            class="imagen-carrera featurette-image img-fluid mx-auto"
-            width="500"
-            height="500"
-          >
-
-
-        </div>
-
-
-      </div>
-
-
-
-      <!-- INDUSTRIAL -->
-
-      <hr class="featurette-divider">
-
-
-      <div
-        class="row featurette"
-        id="industrial"
-      >
-
-
-        <div class="col-md-7 order-md-2">
-
-
-          <h2
-            class="featurette-heading fw-normal lh-1"
-          >
+</div>
+<div class="col-md-5">
+<img alt="Infraestructura tecnológica para la carrera de Software" class="imagen-carrera featurette-image img-fluid mx-auto" height="500" loading="lazy" src="./img/Servidores.jpg" width="500"/>
+</div>
+</div>
+<!-- INDUSTRIAL -->
+<hr class="featurette-divider"/>
+<div class="row featurette" id="industrial">
+<div class="col-md-7 order-md-2">
+<h2 class="featurette-heading fw-normal lh-1">
 
             Carrera Industrial.
 
@@ -950,11 +439,8 @@
               Producción y optimización.
 
             </span>
-
-          </h2>
-
-
-          <p class="lead">
+</h2>
+<p class="lead">
 
             El Ingeniero Industrial de la Universidad Técnica de Ambato
             es un profesional preparado para diseñar, gestionar,
@@ -965,48 +451,16 @@
             y competitividad de las organizaciones.
 
           </p>
-
-
-        </div>
-
-
-
-        <div class="col-md-5 order-md-1">
-
-
-          <img
-            src="images (1).jpg"
-            alt="Carrera Industrial"
-            class="imagen-carrera featurette-image img-fluid mx-auto"
-            width="500"
-            height="500"
-          >
-
-
-        </div>
-
-
-      </div>
-
-
-
-      <!-- ROBÓTICA -->
-
-      <hr class="featurette-divider">
-
-
-      <div
-        class="row featurette"
-        id="robotica"
-      >
-
-
-        <div class="col-md-7">
-
-
-          <h2
-            class="featurette-heading fw-normal lh-1"
-          >
+</div>
+<div class="col-md-5 order-md-1">
+<img alt="Facultad de Ingeniería de la Universidad Técnica de Ambato" class="imagen-carrera featurette-image img-fluid mx-auto" height="500" loading="lazy" src="./img/Carrucell2.jpg" width="500"/>
+</div>
+</div>
+<!-- ROBÓTICA -->
+<hr class="featurette-divider"/>
+<div class="row featurette" id="robotica">
+<div class="col-md-7">
+<h2 class="featurette-heading fw-normal lh-1">
 
             Automatización y Robótica.
 
@@ -1015,11 +469,8 @@
               Control y tecnología inteligente.
 
             </span>
-
-          </h2>
-
-
-          <p class="lead">
+</h2>
+<p class="lead">
 
             El Ingeniero/a en Automatización y Robótica de la
             Universidad Técnica de Ambato es un profesional con
@@ -1033,9 +484,7 @@
             creatividad, innovación y emprendimiento.
 
           </p>
-
-
-          <p class="lead">
+<p class="lead">
 
             Coordina con actitud crítica y autocrítica el diseño,
             implementación y evaluación de proyectos de automatización
@@ -1044,9 +493,7 @@
             respetando el pensamiento divergente.
 
           </p>
-
-
-          <p class="lead">
+<p class="lead">
 
             Desarrolla técnicas de control industrial en sistemas,
             procesos y productos para garantizar su funcionalidad
@@ -1058,48 +505,16 @@
             y ambiental.
 
           </p>
-
-
-        </div>
-
-
-
-        <div class="col-md-5">
-
-
-          <img
-            src="images (2).jpg"
-            alt="Automatización y Robótica"
-            class="imagen-carrera featurette-image img-fluid mx-auto"
-            width="500"
-            height="500"
-          >
-
-
-        </div>
-
-
-      </div>
-
-
-
-      <!-- BIBLIOTECA -->
-
-      <hr class="featurette-divider">
-
-
-      <div
-        class="row featurette"
-        id="biblioteca"
-      >
-
-
-        <div class="col-md-7 order-md-2">
-
-
-          <h2
-            class="featurette-heading fw-normal lh-1"
-          >
+</div>
+<div class="col-md-5">
+<img alt="Tecnología, automatización y conectividad" class="imagen-carrera featurette-image img-fluid mx-auto" height="500" loading="lazy" src="./img/R.png" width="500"/>
+</div>
+</div>
+<!-- BIBLIOTECA -->
+<hr class="featurette-divider"/>
+<div class="row featurette" id="biblioteca">
+<div class="col-md-7 order-md-2">
+<h2 class="featurette-heading fw-normal lh-1">
 
             Biblioteca.
 
@@ -1108,59 +523,24 @@
               Libros físicos y digitales.
 
             </span>
-
-          </h2>
-
-
-          <p class="lead">
+</h2>
+<p class="lead">
 
             Aquí podrás solicitar libros físicos y digitales
             disponibles para apoyar tu formación académica,
             investigación y aprendizaje.
 
           </p>
-
-
-        </div>
-
-
-
-        <div class="col-md-5 order-md-1">
-
-
-          <img
-            src="image.png"
-            alt="Biblioteca"
-            class="imagen-carrera featurette-image img-fluid mx-auto"
-            width="500"
-            height="500"
-          >
-
-
-        </div>
-
-
-      </div>
-
-
-
-      <!-- PRÉSTAMO DE REDES -->
-
-      <hr class="featurette-divider">
-
-
-      <div
-        class="row featurette"
-        id="redes"
-      >
-
-
-        <div class="col-md-7">
-
-
-          <h2
-            class="featurette-heading fw-normal lh-1"
-          >
+</div>
+<div class="col-md-5 order-md-1">
+<img alt="Biblioteca universitaria" class="imagen-carrera featurette-image img-fluid mx-auto" height="500" loading="lazy" src="./img/biblioteca.jpg" width="500"/>
+</div>
+</div><hr class="featurette-divider"/><div class="row featurette" id="libreria"><div class="col-md-7"><h2 class="featurette-heading fw-normal lh-1">Librería y espacio de lectura. <span class="text-body-secondary">Consulta, estudio y aprendizaje.</span></h2><p class="lead">Un espacio destinado a la consulta de material bibliográfico, lectura y estudio. Permite a los estudiantes reforzar sus conocimientos, preparar trabajos académicos y disponer de un ambiente cómodo para el aprendizaje individual o colaborativo.</p></div><div class="col-md-5"><img alt="Librería y espacio de lectura" class="imagen-carrera featurette-image img-fluid mx-auto" height="500" loading="lazy" src="./img/libreria.jpg" width="500"/></div></div>
+<!-- PRÉSTAMO DE REDES -->
+<hr class="featurette-divider"/>
+<div class="row featurette" id="redes">
+<div class="col-md-7">
+<h2 class="featurette-heading fw-normal lh-1">
 
             Préstamo de Redes.
 
@@ -1169,59 +549,24 @@
               Equipos y recursos de red.
 
             </span>
-
-          </h2>
-
-
-          <p class="lead">
+</h2>
+<p class="lead">
 
             Aquí podrás solicitar el préstamo de equipos y recursos
             relacionados con redes para el desarrollo de prácticas,
             actividades académicas y proyectos de los estudiantes.
 
           </p>
-
-
-        </div>
-
-
-
-        <div class="col-md-5">
-
-
-          <img
-            src="image copy.png"
-            alt="Préstamo de Redes"
-            class="imagen-carrera featurette-image img-fluid mx-auto"
-            width="500"
-            height="500"
-          >
-
-
-        </div>
-
-
-      </div>
-
-
-
-      <!-- SECRETARÍA -->
-
-      <hr class="featurette-divider">
-
-
-      <div
-        class="row featurette"
-        id="secretaria"
-      >
-
-
-        <div class="col-md-7 order-md-2">
-
-
-          <h2
-            class="featurette-heading fw-normal lh-1"
-          >
+</div>
+<div class="col-md-5">
+<img alt="Servidores y recursos de red" class="imagen-carrera featurette-image img-fluid mx-auto" height="500" loading="lazy" src="./img/Servidores.jpg" width="500"/>
+</div>
+</div>
+<!-- SECRETARÍA -->
+<hr class="featurette-divider"/>
+<div class="row featurette" id="secretaria">
+<div class="col-md-7 order-md-2">
+<h2 class="featurette-heading fw-normal lh-1">
 
             Secretaría.
 
@@ -1230,11 +575,8 @@
               Atención y servicios estudiantiles.
 
             </span>
-
-          </h2>
-
-
-          <p class="lead">
+</h2>
+<p class="lead">
 
             En Secretaría podrás realizar consultas y solicitar
             información relacionada con trámites académicos,
@@ -1243,48 +585,16 @@
             Sistemas, Electrónica e Industrial.
 
           </p>
-
-
-        </div>
-
-
-
-        <div class="col-md-5 order-md-1">
-
-
-          <img
-            src="images (3).jpg"
-            alt="Secretaría"
-            class="imagen-carrera featurette-image img-fluid mx-auto"
-            width="500"
-            height="500"
-          >
-
-
-        </div>
-
-
-      </div>
-
-
-
-      <!-- ASO FISEI -->
-
-      <hr class="featurette-divider">
-
-
-      <div
-        class="row featurette"
-        id="aso"
-      >
-
-
-        <div class="col-md-7">
-
-
-          <h2
-            class="featurette-heading fw-normal lh-1"
-          >
+</div>
+<div class="col-md-5 order-md-1">
+<img alt="Universidad Técnica de Ambato" class="imagen-carrera featurette-image img-fluid mx-auto" height="500" loading="lazy" src="./img/Carrucell1.jpg" width="500"/>
+</div>
+</div>
+<!-- ASO FISEI -->
+<hr class="featurette-divider"/>
+<div class="row featurette" id="aso">
+<div class="col-md-7">
+<h2 class="featurette-heading fw-normal lh-1">
 
             ASO FISEI.
 
@@ -1293,11 +603,8 @@
               Espacio para los estudiantes.
 
             </span>
-
-          </h2>
-
-
-          <p class="lead">
+</h2>
+<p class="lead">
 
             La ASO FISEI de la Universidad Técnica de Ambato
             ofrece un espacio pensado para la integración,
@@ -1305,9 +612,7 @@
             de la facultad.
 
           </p>
-
-
-          <p class="lead">
+<p class="lead">
 
             En este espacio los estudiantes pueden encontrar
             snacks, golosinas, bebidas, aguas y diferentes
@@ -1315,9 +620,7 @@
             académicas.
 
           </p>
-
-
-          <p class="lead">
+<p class="lead">
 
             Además, cuenta con diferentes alternativas de
             entretenimiento y recreación, como juegos de
@@ -1326,9 +629,7 @@
             momento de descanso entre clases.
 
           </p>
-
-
-          <p class="lead">
+<p class="lead">
 
             La ASO FISEI constituye un punto de encuentro
             estudiantil dentro de la facultad, brindando un
@@ -1336,76 +637,32 @@
             para la comunidad universitaria.
 
           </p>
-
-
-        </div>
-
-
-
-        <div class="col-md-5">
-
-
-          <img
-            src="images (4).jpg"
-            alt="ASO FISEI"
-            class="imagen-carrera featurette-image img-fluid mx-auto"
-            width="500"
-            height="500"
-          >
-
-
-        </div>
-
-
-      </div>
-
-
-
-      <hr class="featurette-divider">
-
-
-    </div>
-
-
-
-    <!-- FOOTER -->
-
-    <footer class="container">
-
-
-      <p class="float-end">
-
-        <a href="#">
+</div>
+<div class="col-md-5">
+<img alt="Cafetería y espacio estudiantil" class="imagen-carrera featurette-image img-fluid mx-auto" height="500" loading="lazy" src="./img/Cafeteria.jpg" width="500"/>
+</div>
+</div>
+<hr class="featurette-divider"/>
+</div>
+<!-- FOOTER -->
+<footer class="container">
+<p class="float-end">
+<a href="#">
 
           Volver arriba
 
         </a>
-
-      </p>
-
-
-      <p>
+</p>
+<p>
 
         Universidad Técnica de Ambato ·
         Facultad de Ingeniería en Sistemas,
         Electrónica e Industrial
 
       </p>
-
-
-    </footer>
-
-
-  </main>
-
-
-
-  <script
-    src="./assets/dist/js/bootstrap.bundle.min.js"
-  >
-  </script>
-
-
+</footer>
+</main>
+<script src="./assets/dist/js/bootstrap.bundle.min.js">
+</script>
 </body>
-
 </html>
